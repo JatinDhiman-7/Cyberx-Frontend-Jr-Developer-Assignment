@@ -1,7 +1,9 @@
 import DoctorsClient from "./DoctorsUI/Doctorslist";
 
 export default async function Home() {
-  const res = await fetch("/api/doctors?page=1", {
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+
+  const res = await fetch(`${baseUrl}/api/doctors?page=1`, {
     cache: "no-store",
   });
 
