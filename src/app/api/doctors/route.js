@@ -57,7 +57,6 @@ export async function GET(request) {
   ];
 
    const { searchParams } = new URL(request.url);
-   console.log(searchParams)
 
   const page = Number(searchParams.get("page") || 1);
   const limit = 10;
@@ -79,7 +78,6 @@ export async function GET(request) {
     );
   }
 
-  
   const start = (page - 1) * limit;
   const end = start + limit;
 
@@ -88,6 +86,5 @@ export async function GET(request) {
   return Response.json({
     data: paginated,
     hasMore: end < filtered.length,
-
   });
 }
