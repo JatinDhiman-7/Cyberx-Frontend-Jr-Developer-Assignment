@@ -1,7 +1,7 @@
 import DoctorsClient from "./DoctorsUI/Doctorslist";
 
 export default async function Home() {
-  const res = await fetch("http://localhost:3000/api/doctors?page=1", {
+  const res = await fetch("/api/doctors?page=1", {
     cache: "no-store",
   });
 
