@@ -57,6 +57,7 @@ export async function GET(request) {
   ];
 
    const { searchParams } = new URL(request.url);
+   console.log(searchParams)
 
   const page = Number(searchParams.get("page") || 1);
   const limit = 10;
@@ -64,7 +65,6 @@ export async function GET(request) {
   const search = searchParams.get("search") || "";
   const specialization = searchParams.get("specialization") || "";
 
-  // FILTER FIRST
   let filtered = doctors;
 
   if (search) {
@@ -79,7 +79,7 @@ export async function GET(request) {
     );
   }
 
-  // PAGINATION AFTER FILTER
+  
   const start = (page - 1) * limit;
   const end = start + limit;
 

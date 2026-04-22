@@ -11,12 +11,12 @@ export default async function Home() {
     <div className="flex flex-col items-center justify-center bg-zinc-50 dark:bg-black min-h-screen p-6">
       <div className="w-full max-w-6xl">
 
-        {/* HEADER */}
+       
         <h1 className="text-2xl font-bold mb-6 text-center">
           Find Your Doctor
         </h1>
 
-        {/* CLIENT COMPONENT */}
+        
         <DoctorsClient initialData={data.data} />
 
       </div>
